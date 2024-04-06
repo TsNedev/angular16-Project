@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "angular16-44884": {
+      "hosting": {
+        "toyota16": [
+          "angular16-44884"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "angular16-44884"
+  }
+}

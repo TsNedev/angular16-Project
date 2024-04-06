@@ -1,0 +1,15 @@
+<h3 class="heading">Gallery</h3>
+<section id="dashboard">
+  <!-- Display a div with information about every post (if any)-->
+  <div *ngIf="!!carPost"> 
+  <div class="car" *ngFor = "let car of carPost | async">
+    <img src={{car.imageUrl}} alt="example1" />
+    
+    <a class="details-btn" [routerLink]="car._id">{{car.brand}} {{car.model}}</a>
+  </div>
+ </div> 
+ <div *ngIf="!carPost"><h2 class="nothing">Nothing to see yet</h2></div> 
+</section>
+<!-- Display an h2 if there are no posts -->
+<!-- <h3 class="nothing">Nothing to see yet</h3>
+-->

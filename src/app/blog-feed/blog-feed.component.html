@@ -1,0 +1,13 @@
+<div>
+    <div class="individual post" *ngFor = "let post of blogPost | async"> 
+        
+        <label  >{{post.tittle}}</label>
+        <p #body>{{post.body}}</p>
+    </div>
+
+    <!--  delete operation -->
+    <input [(ngModel)]="tittle_dell" type="text" textarea="title"> 
+    <button (click)="deletePost()">delete</button> 
+    <button (click)="edit()" >edit</button>
+    
+</div>

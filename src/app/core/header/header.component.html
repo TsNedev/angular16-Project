@@ -1,0 +1,47 @@
+<header>
+    <div class="transparent"></div>
+    <div class="navigation">
+      <nav>
+        <ul>
+          <li>
+            <a routerLink="/home">HOME</a>
+        </li>
+          <li>
+            <a routerLink="/gallery">GALLERY</a>
+          </li>
+
+          
+
+      <div class="navigate">
+<div class="notLogdt" *ngIf="!autService.isLoggedIn">
+          <li>
+            <a routerLink="/login">LOGIN</a>
+           
+          </li>
+
+          <li>
+            <a routerLink="/register">REGISTER</a>
+          </li>
+        </div>
+
+        <div class="Logdt" *ngIf="autService.isLoggedIn" >
+
+          <li>
+            <a routerLink="/auth/cars">ADD CAR</a>
+          </li>
+
+          <li>
+            <a routerLink="/auth/profile">USER </a>
+          </li>
+
+          <li>
+            <a (click)="logout()">LOGOUT</a>
+          </li>
+        </div>
+      </div>
+        </ul>
+      </nav>
+      <a routerLink="/home" class="logo"><img src="/resorses/pngegg.png" alt="logo" /></a>
+    </div>
+  </header>
+  

@@ -1,0 +1,83 @@
+<section id="edit">
+    <div class="form form-auto">
+      <h2>Edit Car</h2>
+      <form #form="ngForm" (ngSubmit)="addCar(form)">
+        <input
+        value = "testting"
+          type="text"
+          name="brand"
+          id="brand"
+          placeholder="Brand"
+          #inputBrand="ngModel"
+          ngModel= {{carP.brand}}
+        />
+        <input
+          type="text"
+          name="model"
+          id="model"
+          placeholder="Model"
+          #inputModel="ngModel"
+          ngModel = {{carP.model}}
+        />
+       
+        <input
+          type="text"
+          name="imageUrl"
+          id="car-image"
+          placeholder="Your Car Image URL"
+          #inputImageUrl="ngModel"
+            ngModel = {{carP.imageUrl}}
+        />
+        <input 
+        type="text" 
+        name="price" 
+        id="price" 
+        placeholder="Price in Euro"
+        #inputPrice="ngModel"
+        ngModel= {{carP.price}} />
+        <input
+          type="number"
+          name="weight"
+          id="weight"
+          placeholder="Weight in Kg"
+          ngModel= {{carP.weight}}
+          #inputWeight="ngModel"
+            
+        />
+        <input
+          type="text"
+          name="speed"
+          id="speed"
+          placeholder="Top Speed in Kmh"
+          #inputSpeed="ngModel"
+            ngModel= {{carP.speed}}
+        />
+        <input type="text" 
+        name="color" 
+        id="color" 
+        placeholder="color" 
+        #inputColor="ngModel"
+        ngModel= {{carP.color}}/>
+        <input
+          type="text"
+          name="register"
+          id="register"
+          placeholder="first register"
+          #inputRegister="ngModel"
+            ngModel= {{carP.register}}
+        />
+        <textarea
+          id="about"
+          name="about"
+          placeholder="More About The Car"
+          rows="10"
+          cols="50"
+          #inputAbout="ngModel"
+            ngModel= {{carP.about}}
+            
+        ></textarea>
+        <button type="submit">Edit car</button>
+      </form>
+    </div>
+  </section>
+  

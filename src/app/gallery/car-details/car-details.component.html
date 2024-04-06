@@ -1,0 +1,19 @@
+<section id="details">
+    <div id="details-wrapper" >
+      <img id="details-img" src={{carP.imageUrl}} alt="example1" />
+      <p id="details-title">{{carP.brand}}  {{carP.model}}</p>
+      <div id="info-wrapper">
+        <div id="details-description">
+            <p class="price">Price: €{{carP.price}}</p>
+            <p class="weight">Weight: {{carP.weight}} kg</p>
+            <p class="top-speed">Top Speed: {{carP.speed}} kph</p>
+            <p class="color">Color: {{carP.color}}</p>
+            <p class="register">First Registration:{{carP.register}}</p>
+          <p id="car-description">
+            {{carP.about}}</p>
+        </div>
+        <!--Edit and Delete are only for creator-->
+        <div id="action-buttons" *ngIf="userId == carP.userId">
+          <a routerLink='edit' id="edit-btn">Edit</a>
+          <a (click)= deleteRecord() routerLink="/gallery" id="delete-btn">Delete</a>
+        </div>
