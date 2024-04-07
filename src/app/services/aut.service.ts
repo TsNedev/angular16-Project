@@ -90,4 +90,8 @@ userData:any;
       this.firestore.collection('users').doc(localStorage["userId"]).update({username, email, tel});
        
    }
+
+   get isLogged(): boolean {
+    return !!localStorage['userId'];
+  }
   }

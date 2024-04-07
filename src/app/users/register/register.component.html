@@ -42,14 +42,18 @@
           placeholder="john.doe@gmail.com"
           ngModel
           #inputEmail="ngModel"
+          required="true"
         />
       </p>
 
-      <p class="error" >
+      <p class="error" *ngIf="inputEmail.value.length==0 && inputUsername.touched">
         Email is required!
       </p>
-      <p class="error" >
+      <p class="error" *ngIf="emailExsists">
         Email exists!
+      </p>
+      <p class="error" *ngIf="invalidEmail">
+        Email is invalid !
       </p>
 
       <!-- telephone -->
@@ -82,14 +86,14 @@
           placeholder="******"
           ngModel
           #inputPassword="ngModel"
-          
+          required="true"
           minlength="5"
         />
       </p>
-       <p class="error">
+       <p class="error"*ngIf="inputPassword.value.length==0 && inputUsername.touched">
                   Password is required!
               </p>
-              <p class="error">
+              <p class="error"*ngIf="inputPassword.value.length<5 && inputUsername.touched">
                   Password must be at least 5 characters!
               </p> 
 
@@ -105,12 +109,14 @@
           placeholder="******"
           ngModel
           #inputRePassword="ngModel"
+          required="true"
+          minlength="5"
          
         
         />
       </p>
 
-      <p class="error">Repeat Password does not match password!</p>
+      <p class="error"*ngIf="inputPassword.value !== inputRePassword.value && inputUsername.touched">Repeat Password does not match password!</p>
 
       <button>Create Account</button>
 

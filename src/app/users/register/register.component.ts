@@ -15,7 +15,7 @@ import { User } from 'src/app/types/user';
 export class RegisterComponent implements OnInit{
 
 emailExsists = false
-
+invalidEmail =false
 error! :string
     
   constructor( public AutService:AutService, 
@@ -43,12 +43,16 @@ async onRegister(form:NgForm) {
   
   
 } catch (e) {
-  console.log("test");
   const error =JSON.stringify(e);
   const convert = JSON.parse(error)
    this.error = convert.code
-   console.log(error);
-   console.log(password);
+   console.log(this.error);
+   if("auth/email-already-in-use"==this.error){
+    this.emailExsists = true
+   }
+   if("auth/invalid-email"==this.error){
+    this.invalidEmail = true
+   }
  }
   const data : User = {
     cars: [],
