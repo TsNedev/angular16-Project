@@ -7,6 +7,7 @@ export interface User{
     created_at: string;
     updatedAt: string;
     username : string;
+    image:string;
 }
 /* export interface UserForAouth{
     firstName : string;

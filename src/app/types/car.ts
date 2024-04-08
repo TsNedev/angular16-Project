@@ -12,7 +12,4 @@ export interface Car {
   color:string;
   register:string;
   about:string[];
-  //created_at: string;
-  //updatedAt: string;
-  
 }

@@ -32,7 +32,7 @@ async onRegister(form:NgForm) {
   if (form.invalid) {
     return;
   }
-   const{email,password,username,telepone} = form.value;
+   const{email,password,username,telepone,image} = form.value;
    
    
    /* const user : User{
@@ -46,7 +46,7 @@ async onRegister(form:NgForm) {
   const error =JSON.stringify(e);
   const convert = JSON.parse(error)
    this.error = convert.code
-   console.log(this.error);
+   
    if("auth/email-already-in-use"==this.error){
     this.emailExsists = true
    }
@@ -62,7 +62,8 @@ async onRegister(form:NgForm) {
     email: email,
     created_at: '',
     updatedAt: '',
-    username: username
+    username: username,
+    image: image
   }
  
    this.firestore.collection('users').doc(localStorage["userId"]).set(data);

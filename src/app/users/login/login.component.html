@@ -4,9 +4,8 @@
         <h2>Login Form</h2>
   
         <p class="field field-icon">
-          <label for="email"
-            ><span><i class="fas fa-envelope"></i></span
-          ></label>
+          <label for="email">
+          </label>
           <input
             type="email"
             name="email"
@@ -24,14 +23,14 @@
           <p class="error" *ngIf="inputEmail.errors?.['required']">
             Email is required!
           </p>
-          <p class="error" *ngIf="inputEmail.errors?.['emailValidator']">
+          <p class="error" *ngIf="invalid">
             Email is not valid!
           </p>
         </ng-container>
   
         <p class="field field-icon">
           <label for="password"
-            ><span><i class="fas fa-lock"></i></span
+            
           ></label>
           <input
             type="password"
@@ -53,10 +52,12 @@
             Password must be at least 5 characters!
           </p>
         </ng-container>
-  
+        <p class="error" *ngIf="error">
+           No user wit this email !
+        </p>
         <button
           [disabled]="form.invalid"
-          [style]="{ backgroundColor: form.invalid ? 'grey' : 'blue' }"
+          [style]="{ backgroundColor: form.invalid ? 'grey' : 'rgb(1, 1, 1)' }"
         >
           Login
         </button>

@@ -1,7 +1,7 @@
 <h3 class="heading">Gallery</h3>
 <section id="dashboard">
   <!-- Display a div with information about every post (if any)-->
-  <div *ngIf="!!carPost"> 
+  <div id="wraper" *ngIf="!!carPost"> 
   <div class="car" *ngFor = "let car of carPost | async">
     <img src={{car.imageUrl}} alt="example1" />
     

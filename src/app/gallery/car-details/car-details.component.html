@@ -13,7 +13,8 @@
             {{carP.about}}</p>
         </div>
         <!--Edit and Delete are only for creator-->
-        <div id="action-buttons" *ngIf="userId == carP.userId">
+        <div  class="action-buttons" *ngIf="userId == carP.userId">
           <a routerLink='edit' id="edit-btn">Edit</a>
           <a (click)= deleteRecord() routerLink="/gallery" id="delete-btn">Delete</a>
         </div>
+        

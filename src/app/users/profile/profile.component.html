@@ -1,7 +1,12 @@
 <!-- homepage -->
 <div class="container">
     <div class="profile">
-      <img src="./../../../assets/profile.png" alt="default user" />
+      <div *ngIf="profileDetails.image.length !== 0"> 
+      <img src= {{profileDetails.image}} alt="default user" />
+    </div>
+    <div *ngIf="profileDetails.image.length == 0">
+      <img src= "https://as1.ftcdn.net/v2/jpg/03/46/83/96/1000_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg" alt="default user" />
+    </div>
       <h3>User Info:</h3>
   
       <!-- READONLY MODE -->
@@ -72,13 +77,28 @@
               />
             </div>
           </div>
+          <!-- image -->
+          <div class="flex">
+            <p>image</p>
+            <div>
+              <select name="select-image" id="select-image" class="image">
+              </select>
+              <input
+                type="text"
+                name="image"
+                id="image"
+                [value]="profileDetails.image"
+                formControlName="image"
+              />
+            </div>
+          </div>
   
           <!-- Actions -->
-          <button class="red-button" (click)="onCancel($event)">Cancel</button>
+          <button class="button" (click)="onCancel($event)">Cancel</button>
           <button
-            class="green-button"
+            class="button"
             [disabled]="form.invalid"
-            [style]="{ backgroundColor: form.invalid ? 'grey' : 'green' }"
+            [style]="{ backgroundColor: form.invalid ? 'grey' : 'black' }"
           >
             Save
           </button>

@@ -15,7 +15,8 @@ import { EditComponent } from './edit/edit.component';
     AddCarComponent,
     GalleryComponent,
     CarDetailsComponent,
-    EditComponent
+    EditComponent,
+    
   ],
   imports: [
     CommonModule,GalleryRoutingModule,RouterModule,FormsModule

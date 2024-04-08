@@ -6,6 +6,7 @@ import { MainComponent } from "../main/main.component";
 import { CarDetailsComponent } from "./car-details/car-details.component";
 import { EditComponent } from "./edit/edit.component";
 
+
 const routes:Routes = [{path:'gallery',component: GalleryComponent},
 {path:'cars',component:AddCarComponent},
  {
@@ -13,7 +14,8 @@ const routes:Routes = [{path:'gallery',component: GalleryComponent},
     children: [
       { path: '', pathMatch: 'full', component: MainComponent },
       { path: ':carId', component: CarDetailsComponent},
-      {path: ':carId/edit', component: EditComponent}
+      {path: ':carId/edit', component: EditComponent},
+     
     ],
   }, 
 ]

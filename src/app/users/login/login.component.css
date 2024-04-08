@@ -1,39 +1,38 @@
-/*login register forms  */
+/*login  form  */
 
-form.login,
-form.register {
-  width: 40%;
-  margin: 2em auto 0;
-  text-align: center;
+.container{
+  margin-top: 0px;
 }
 
-.login fieldset,
-.register fieldset {
+form.login {
+  width: 40%;
+  margin: 0em auto 0;
+  padding-top: 3em;
+  text-align: center;
+  padding-bottom: 2em;
+}
+
+.login fieldset {
   border-radius: 0.3em;
   padding: 0.8em;
-  background-color: #ffffff;
+  background-color: #999;
 }
 
-.login h2,
-.register h2 {
+.login h2 {
   padding-top: 0;
   border-bottom: none;
 }
 
-.login p,
-.register p {
+.login p {
   padding-bottom: 0;
   padding-top: 1.5rem;
 }
 
-.login input,
-.register input {
+.login input {
   flex: 0 1 100%;
   border: 1px solid;
   padding: 0.3em;
-  border-left: 0.3em solid green;
-  border-top-right-radius: 0.3em;
-  border-bottom-right-radius: 0.3em;
+  border-radius: 0.3em;
 }
 
 .login select,
@@ -41,8 +40,7 @@ form.register {
   border-color: black;
 }
 
-.login button,
-.register button {
+.login button{
   color: white;
   border: none;
   border-radius: 0.3em;
@@ -52,23 +50,19 @@ form.register {
   outline: none;
 }
 
-.login i,
-.register i {
+.login i {
   border: 1px solid;
   border-right: none;
   padding: 0.55em;
-  border-top-left-radius: 0.3em;
-  border-bottom-left-radius: 0.3em;
+  border-radius: 0.3em;
   background-color: #e9ecef;
 }
 
-.login a,
-.register a {
-  color: #007bff;
+.login a{
+  color: rgb(1, 1, 1);
 }
 
-.login a:hover,
-.register a:hover {
+.login a:hover {
   cursor: pointer;
 }
 
@@ -76,8 +70,7 @@ form.register {
   padding-right: 0.8em;
 }
 
-.login .field,
-.register .field {
+.login .field{
   display: flex;
   padding-bottom: 0;
 }
@@ -91,6 +84,3 @@ p.error {
   padding-top: 0;
 }
 
-input.input-error {
-  border-left-color: red !important;
-}

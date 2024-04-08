@@ -6,9 +6,7 @@
 
       <!-- username -->
       <p class="field field-icon">
-        <label for="username"
-          ><span><i class="fas fa-user"></i></span
-        ></label>
+        <label for="username"></label>
         <input
           class="input-error"
           type="text"
@@ -32,9 +30,7 @@
 
       <!-- email -->
       <p class="field field-icon">
-        <label for="email"
-          ><span><i class="fas fa-envelope"></i></span
-        ></label>
+        <label for="email"></label>
         <input
           type="email"
           name="email"
@@ -58,9 +54,7 @@
 
       <!-- telephone -->
       <p class="field field-icon">
-        <label for="tel"
-          ><span><i class="fas fa-phone"></i></span
-        ></label>
+        <label for="tel"></label>
         <select name="telepone" id="select-tel" class="tel">
           <option value="00359">+359</option>
         </select>
@@ -73,12 +67,24 @@
           #inputTelepone="ngModel"
         />
       </p>
-
+      <!-- aicon -->
+<p class="field field-icon">
+        <label for="image"></label>
+        <select name="image"  class="image">
+        </select>
+        <input
+          type="text"
+          name="image"
+          id="image"
+          placeholder="profile picture"
+          ngModel
+          #inputImage="ngModel"
+        />
+      </p>
       <!-- password -->
       <p class="field field-icon">
         <label for="password"
-          ><span><i class="fas fa-lock"></i></span
-        ></label>
+          ></label>
         <input
           type="password"
           name="password"
@@ -99,9 +105,7 @@
 
       <!-- rePassword -->
       <p class="field field-icon">
-        <label for="rePassword"
-          ><span><i class="fas fa-lock"></i></span
-        ></label>
+        <label for="rePassword"></label>
         <input
           type="password"
           name="rePassword"
@@ -118,7 +122,8 @@
 
       <p class="error"*ngIf="inputPassword.value !== inputRePassword.value && inputUsername.touched">Repeat Password does not match password!</p>
 
-      <button>Create Account</button>
+      <button  [disabled]="form.invalid"
+      [style]="{ backgroundColor: form.invalid ? 'grey' : 'rgb(1, 1, 1)' }">Create Account</button>
 
       <p class="text-center">
         Have an account?

@@ -1,52 +1,57 @@
-/*login register forms  */
+/*register form  */
 #container{
-    background-color: #e9ecef;
+    background-color:  #999;
 }
 h2{
     color: black;
 }
-form.login,
+
 form.register {
   width: 40%;
-  margin: 2em auto 0;
+  margin: 0em auto 0;
   text-align: center;
+  padding-top: 4em;
+  padding-bottom: 8em;
 }
 
-.login fieldset,
+
 .register fieldset {
   border-radius: 0.3em;
   padding: 0.8em;
-  background-color: #ffffff;
+  background-color:  #999;
 }
 
-.login h2,
+
 .register h2 {
   padding-top: 0;
   border-bottom: none;
 }
 
-.login p,
+
 .register p {
   padding-bottom: 0;
   padding-top: 1.5rem;
 }
 
-.login input,
+
 .register input {
   flex: 0 1 100%;
   border: 1px solid;
   padding: 0.3em;
-  border-left: 0.3em solid green;
-  border-top-right-radius: 0.3em;
-  border-bottom-right-radius: 0.3em;
+  border-radius: 0.3em;
+ ;
 }
 
-.login select,
+#tel {
+ 
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
 .register select {
   border-color: black;
 }
 
-.login button,
+
 .register button {
   color: white;
   border: none;
@@ -57,7 +62,7 @@ form.register {
   outline: none;
 }
 
-.login i,
+
 .register i {
   border: 1px solid;
   border-right: none;
@@ -67,12 +72,12 @@ form.register {
   background-color: #e9ecef;
 }
 
-.login a,
+
 .register a {
-  color: #007bff;
+  color: rgb(1, 1, 1);
 }
 
-.login a:hover,
+
 .register a:hover {
   cursor: pointer;
 }
@@ -81,7 +86,7 @@ form.register {
   padding-right: 0.8em;
 }
 
-.login .field,
+
 .register .field {
   display: flex;
   padding-bottom: 0;
@@ -96,6 +101,4 @@ p.error {
   padding-top: 0;
 }
 
-.input-error {
-  border-left-color: red;
-}
+

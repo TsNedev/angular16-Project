@@ -86,7 +86,7 @@ userData:any;
          
     }
 
-    updateProfile(username:string, email:string, tel:string){
+    updateProfile(username:string, email:string, tel:string,image:string){
       this.firestore.collection('users').doc(localStorage["userId"]).update({username, email, tel});
        
    }

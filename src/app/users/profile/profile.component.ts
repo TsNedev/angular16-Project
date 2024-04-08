@@ -21,13 +21,15 @@ export class ProfileComponent implements OnInit {
     email: undefined,
     created_at: '',
     updatedAt: '',
-    username: ''
+    username: '',
+    image: '',
   };
   
   form = this.fb.group({
     username: ['', [Validators.required, Validators.minLength(4)]],
     email: ['', [Validators.required]],
     tel: [''],
+    image:['']
   });
 
   constructor(private fb: FormBuilder, private autService: AutService,public firestore : AngularFirestore) {}
@@ -38,7 +40,8 @@ const user = this.firestore.collection('users').doc(localStorage["userId"]).ref
    getDoc(user)
    .then((res)=>{
     const data:any = res.data()
-    const { username, tel, email,created_at,updatedAt,cars,botCars,_id} = data;
+    const { username, tel, email,created_at,updatedAt,cars,botCars,_id,image} = data;
+  
     
     
     this.profileDetails = {
@@ -49,13 +52,15 @@ const user = this.firestore.collection('users').doc(localStorage["userId"]).ref
       updatedAt,
       cars,
       botCars,
-      _id
+      _id,
+      image
     };
 
     this.form.setValue({
       username,
       tel,
       email,
+      image,
     });
     }) 
   } 
@@ -70,9 +75,9 @@ const user = this.firestore.collection('users').doc(localStorage["userId"]).ref
     }
 
     this.profileDetails = this.form.value as User;
-    const { username, email, tel } = this.profileDetails;
+    const { username, email, tel,image } = this.profileDetails;
 
-    this.autService.updateProfile(username, email, tel)
+    this.autService.updateProfile(username, email, tel,image)
       this.onToggle();
     
   }
