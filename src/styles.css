@@ -6,11 +6,7 @@
     padding: 0;
     margin: 0;
   }
-  
-  /*
-  *Reset CSS model sizing calculations
-  */
-  
+    
   html {
     box-sizing: border-box;
   }
@@ -21,7 +17,7 @@
     box-sizing: inherit;
   }
   
-  /* Typography */
+
   html {
     font: 18px/1.5 Verdana, sans-serif;
   }
@@ -124,21 +120,21 @@
     text-align: right;
   }
   
-  /* Layout Styiling */
+  
   
   body {
     margin: 0;
   }
   
   .site {
-    max-width: 50em;
+   
     margin: 0 auto;
   }
   
   table {
     border: 1px solid #ccc;
     width: 100%;
-    border-spacing: 0.2em;
+    
     margin-bottom: 1.5em;
   }
   
@@ -164,10 +160,10 @@
     background: #ccc;
   }
   
-  /* Global styles */
+  
   body {
     background-color: #2b2a2a;
-    max-width: 1366px;
+    
     margin: auto;
     position: relative;
     min-height: 100vh;
@@ -183,7 +179,7 @@
   }
   
   button {
-    background-color: #4ebced;
+    background-color: rgb(1, 1,1);
     color: white;
   }
   
