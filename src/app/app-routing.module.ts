@@ -13,6 +13,10 @@ const routes: Routes = [ { path: '', pathMatch: 'full', redirectTo: '/home' },
   path: 'auth',
   loadChildren: () => import('./gallery/gallery.module').then((m) => m.GalleryModule)
 },
+{
+  path: 'auth',
+  loadChildren: () => import('./models/models.module').then((m) => m.ModelsModule)
+},
 
 {path:'**', redirectTo:'/404'},
 {path:'404', component: ErrorComponent}];

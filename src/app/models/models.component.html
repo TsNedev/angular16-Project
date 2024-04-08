@@ -1,0 +1,10 @@
+<div class="container" >
+    <h2>Toyota models</h2>
+<div *ngFor = "let model of models | async">
+<div class="models">
+    <ul>
+        <li><a [routerLink]="model.model">{{model.model}}</a></li>
+    </ul>
+</div>
+</div>
+</div>

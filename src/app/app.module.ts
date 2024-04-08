@@ -27,18 +27,17 @@ import {
   provideRemoteConfig,
 } from '@angular/fire/remote-config';
 import { HomeComponent } from './home/home.component';
-
 import { FormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { environment } from '../environments/environment';
-
 import { CoreModule } from './core/core.module';
 import { MainComponent } from './main/main.component';
 import { GalleryModule } from './gallery/gallery.module';
 import { UsersModule } from './users/users.module';
 import { ApiService } from './api.service';
 import { AutService } from './services/aut.service';
+import { ModelsModule } from './models/models.module';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, MainComponent],
@@ -70,6 +69,7 @@ import { AutService } from './services/aut.service';
     CoreModule,
     GalleryModule,
     UsersModule,
+    ModelsModule,
     AppRoutingModule,
   ],
   providers: [ScreenTrackingService, UserTrackingService, AutService],

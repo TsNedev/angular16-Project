@@ -1,0 +1,29 @@
+.container{
+    color: white;
+    padding-bottom: 8vw;
+    padding-top: 6vw;
+    text-align: center;
+}
+h2{
+    border: none;
+
+}
+li{
+    text-decoration: none;
+    list-style-type:none
+}
+a{
+    text-decoration: none;
+    color: white;
+
+}
+ul{
+    text-decoration: none;
+}
+li :hover{
+    text-align: center;  
+   font-size: 1.5vw;
+   cursor: pointer;
+   color: red;
+
+}

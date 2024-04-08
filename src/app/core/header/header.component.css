@@ -1,100 +1,92 @@
+header {
+  top: 0;
+  display: block;
+}
 
-header{
-    top: 0;
-    display: block;
-    }  
-  
-  div.wraper{
-      width: 100%;
-      height: 100%;
-      overflow:hidden
-  }
-  /* design-null 1 */
-  .logo img{
-     margin-right: 10px;
-      float: right;
-      width: 2.6vw;
-      height: 2vw;
-      align-items: center;
-      top: 0px;
-      
-      /* background: url(design-null.png); */
-      
-  }
-  
-  nav ul {
-     align-content: center;
-    
-      padding:  0;
-      margin: 0;
-      float: inherit;
-  }
-  nav li {
-      
-     
-      align-items: center;
-      margin: auto;
-      float: left;
-      display: inline;
-      width: 12vw;
-      height: 1.5vw;
-      text-decoration: none;
-      color: white;
-      /* left: 19.93px;
+div.wraper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+/* design-null 1 */
+.logo img {
+  margin-right: 10px;
+  float: right;
+  width: 2.6vw;
+  height: 2vw;
+  align-items: center;
+  top: 0px;
+
+  /* background: url(design-null.png); */
+}
+
+nav ul {
+  align-content: center;
+
+  padding: 0;
+  margin: 0;
+  float: inherit;
+}
+nav li {
+  align-items: center;
+  margin: auto;
+  float: left;
+  display: inline;
+  width: 12vw;
+  height: 1.5vw;
+  text-decoration: none;
+  color: white;
+  /* left: 19.93px;
       top: 16.08px; */
-      
-      font-family: 'Lao Muang Khong';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 1vw;
-      text-align: center;  
-  }
-  nav{
-      align-content: center;
-  }
-  nav a {
-     
-     display: block;
-      text-decoration: none;
-      color: #ffffff;
-      transition: 1s;
-  }
-  nav li :hover{
-      text-align: center;  
-     font-size: 1.2vw;
-     cursor: pointer;
-  
-  }
-  div.navigation{
-      display: flex;
-      justify-content: space-between;
-      padding: auto;
-      padding-top: 0.5vw;
-      position: absolute;
-      align-content: center;
-      
+
+  font-family: "Lao Muang Khong";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1vw;
+  text-align: center;
+}
+nav {
+  align-content: center;
+}
+nav a {
+  display: block;
+  text-decoration: none;
+  color: #ffffff;
+  transition: 1s;
+}
+nav li :hover {
+  text-align: center;
+  font-size: 1.2vw;
+  cursor: pointer;
+}
+div.navigation {
+  display: flex;
+  justify-content: space-between;
+  padding: auto;
+  padding-top: 0.5vw;
+  position: absolute;
+  align-content: center;
+
   width: 100%;
   height: 2.5vw;
-  
-  }
-  
-  div.transparent{
-      z-index: -0;
-      position: absolute;
-      top: 0;
-      width: 100%;
-      height: 2.5vw;
-      background: #050505;
-      opacity: 0.26; 
-      
-  }
-  
-  .notLogdt{
-      display: inline;
-  }
-  div.navigate{
+}
+
+div.transparent {
+  z-index: -0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 2.5vw;
+  background: #050505;
+  opacity: 0.26;
+}
+
+.notLogdt {
   display: inline;
-  }
-  .Logdt{
-      display: inline;  
-  }
+}
+div.navigate {
+  display: inline;
+}
+.Logdt {
+  display: inline;
+}
